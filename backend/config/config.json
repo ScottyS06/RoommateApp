@@ -1,0 +1,7 @@
+{
+  "localDb": {
+    "mountDirectory": "mongo",
+    "port": 9000,
+    "dbName": "roommate"
+  }
+}
