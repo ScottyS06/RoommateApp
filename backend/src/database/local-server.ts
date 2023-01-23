@@ -4,7 +4,7 @@ import { gracefulKill } from '../utils/system-utils';
 
 let dbProcess: ChildProcess;
 const startPrimaryServer = () => {
-  const args = [`--config=/opt/homebrew/etc/mongod.conf`, `--port=${baseConfig.localDb.port}`];
+  const args = [`--config=${process.env.CONF_PATH}/etc/mongod.conf`, `--port=${baseConfig.localDb.port}`];
   dbProcess = child_process.spawn('mongod', args, { stdio: ['ignore', 'pipe', 'ignore'] });
   dbProcess.stderr?.on('data', data => console.error(data.toString()));
 };
