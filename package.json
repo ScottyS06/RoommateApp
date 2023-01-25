@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "prettier": "2.8.3"
+  },
+  "dependencies": {
+    "react-native-svg": "^13.7.0"
   }
 }
